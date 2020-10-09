@@ -1,0 +1,538 @@
+/* MASTER STYLES */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#non-footer-container {
+    min-height: 100%;
+}
+
+#non-footer-content {
+    overflow: auto;
+    padding-bottom: 55px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+h3 {
+    font-weight: 900;
+    margin-bottom: 15px;
+    margin-right: 35px;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+h1 {
+    margin-bottom: 0.67em;
+}
+
+h2 {
+    margin: 0.83em 0;
+}
+
+/* NAV STYLES */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.right-side {
+    display: flex;
+}
+
+.nav-wrapper > .right-side > div {
+    margin-left: 38px;
+    font-size: 0.9em;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+.nav-link-wrapper a {
+    color: seagreen;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+}
+
+.nav-home-link-wrapper a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.4em;
+}
+
+/* MAP STYLES */
+.legend-wrapper {
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.legend-type-wrapper {
+    display: flex;
+    padding-left: 38px;
+}
+
+.legend-type-wrapper > p {
+    margin: 0;
+}
+
+@media screen and (min-height: 100px) { 
+    #map{
+        height: 150px;
+    }
+}
+
+@media screen and (min-height: 300px) { 
+    #map{
+        height: 400px;
+    }
+}
+
+@media screen and (min-height: 500px) { 
+    #map{
+        height: 550px;
+    }
+}
+
+@media screen and (min-height: 700px) {
+    #map{
+        height: 750px;
+    }
+}
+
+@media screen and (min-height: 715px) {
+    #map{
+        height: 775px;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    #map{
+        height: 2100px;
+    }
+}
+
+
+.map-wrapper {
+    padding-top: 5px;
+}
+
+/*The modal background*/
+@media screen and (max-width: 1192px) {
+    .modal {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        right: 140px;
+        top: 215px;
+        width: auto;
+        height: auto;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 1192px) and (max-width: 1522px) {
+    .modal {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        right: 200px;
+        top: 200px;
+        width: auto;
+        height: auto;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 1522px) {
+    .modal {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        right: 260px;
+        top: 200px;
+        width: auto;
+        height: auto;
+        overflow: auto;
+    }
+}
+
+/*The modal content*/
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 2px solid #888;
+}
+
+.modal-content > a:link {
+    color: purple;
+}
+
+.modal-content > a:visited {
+    color: #2f4f4f;
+}
+
+
+/*The modal close button*/
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close > p {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Info window styles */
+.info-window-wrapper {
+    display: flex;
+    padding: 5px;
+}
+
+.info-window-img-wrapper > img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 160px;
+    width: 160px;
+    position: relative;
+}
+
+.info-window-img-wrapper {
+    position: center;
+}
+
+.info-window-text-wrapper > p {
+    font-size: 0.9em;
+    padding-left: 20px;
+}
+
+.info-text {
+    font-weight: lighter;
+    color: #696969;
+}
+
+.info-heading {
+    margin-bottom: 8px;
+    font-weight: bolder;
+}
+
+/* PROFILE STYLES */
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+    /* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+    /* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+    /* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+
+    /* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+}
+
+    /* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+    /* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.pressIndent {
+    text-indent: 64px;
+}
+
+.profile-details-wrapper > p {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.profile-details-wrapper > p > a, .profile-subtext > a {
+    text-decoration: none;
+}
+
+.profile-details-wrapper > p > a:link, .profile-subtext > a:link {
+    color: purple;
+}
+
+.profile-details-wrapper > p > a:visited, .profile-subtext > a:visited {
+    color: #2f4f4f;
+}
+
+.profile-subtext {
+    color: #696969;
+}
+
+.profile-content-wrapper h1 {
+    color: seagreen;
+    font-weight: bolder;
+}
+
+.profile-content-wrapper {
+    padding-bottom: 38px;
+    padding-right: 38px;
+    padding-left: 38px;
+    padding-top: 0;
+}
+
+/* CARD STYLES */
+@media screen and (max-width: 584px) {
+    .card-items-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 19px;
+        padding-right: 19px;
+        padding-bottom: 19px;
+    }
+}
+
+@media screen and (min-width: 584px) and (max-width: 1063px) {
+    .card-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 19px;
+        padding-right: 19px;
+        padding-bottom: 19px;
+    }
+}
+
+@media screen and (min-width: 1063px) {
+    .card-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-left: 19px;
+        padding-right: 19px;
+        padding-bottom: 19px;
+    }
+}
+
+.card-item-wrapper {
+    position: relative;
+    padding: 19px;
+    display: none;
+}
+
+.card-img-background {
+    width: 100%;
+}
+
+.modal-content > a,
+.card-item-wrapper > a {
+    display: block;
+}
+
+    /* Text style for cards */
+.text-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    font-weight: 600;
+    color: transparent;
+}
+
+.date {
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+
+.project {
+    font-size: 1.7em;
+    font-weight: bolder;
+    padding-top: 30px;
+    padding-bottom: 7px;
+}
+
+.type {
+    font-size: 0.9em;
+}
+
+.img-darken {
+    transition: 0.4s;
+    filter: brightness(5%);
+}
+
+.text-appear {
+    transition: 0.4s;
+    font-weight: 600;
+    color: #696969;
+}
+
+/* LOAD MORE BUTTON */
+#lmbutton {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #DFE1E1;
+    color:#696969;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  
+  #lmbutton:hover {
+    background-color: #5E5E5E;
+    color: #EBEBEB;
+  }
+  
+  button {
+      margin-bottom: 38px;
+  }
+
+/* CONTRIBUTE PAGE STYLES */
+.profile-image-wrapper img {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.contribute-heading-wrapper h1 {
+    padding-right: 38px;
+    padding-left: 38px;
+    color: seagreen;
+    font-weight: bolder;
+}
+
+.pFirstLine {
+    margin-top: 30px;
+}
+
+.contributeP {
+    color: #696969;
+}
+
+
+/* FOOTER STYLES */
+#footer {
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: seagreen;
+    position: relative;
+    height: 55px;
+    margin-top: -55px;
+    clear: both;
+}
+
+.footer-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    font-size: 0.7em;
+    color: #212121;
+}
+
+.footer-contents > .footer-left-side, .footer-right-side > p {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177829724-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-177829724-1');
+    </script>
+    <meata charset= "utf-8" />
+    <title>NiagaraDev &mdash; Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel= "stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div id="non-footer-container">
+    <div id="non-footer-content">
+        <!-- NAV BAR -->
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-home-link-wrapper">
+                        <a href="index.html">NiagaraDev</a>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="index.html">map</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="newDevs.html">new developments</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="press.html">press</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="contribute.html">contribute</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAP LEGEND -->
+        <div class="legend-wrapper">
+            <div class="legend-type-wrapper">
+                <p><img src="images/markerImages/preconstruction32.png" alt="silver" class="legend-marker" style="vertical-align: bottom"/>
+                &mdash; pre-construction </p>
+            </div>
+
+            <div class="legend-type-wrapper">
+                <p><img src= "images/markerImages/construction32.png" alt="grey" class="legend-marker" style="vertical-align: bottom"/>
+                &mdash; construction </p>
+            </div>
+
+            <div class="legend-type-wrapper">
+                <p><img src= "images/markerImages/complete32.png" alt="black" class="legend-marker" style="vertical-align: bottom"/>
+                &mdash; complete </p>
+            </div>
+        </div>
+        
+        <div class="map-wrapper">
+            <div id="map"></div>
+        </div>
+
+        <!-- MODALS -->
+            <!-- Port Dalhousie -->
+        <div id="RoyalPort" class="modal">
+            <div class="modal-content">
+                <span id="RoyalPortClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/royalPort.html">
+                    <h3>Royal Port</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/royalPort.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/royalPort/RoyalPortSquare.jpg" alt="Royal Port" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">57 Lakeport Rd<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential, Institutional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="HarbourClub" class="modal">
+                <div class="modal-content">
+                    <span id="HarbourClubClose" class="close"><p>&times;</p></span>
+                    <a href="profiles/portDal/harbourClub.html">
+                        <h3>The Harbour Club</h3>
+                    </a>
+                    <div class="info-window-wrapper">
+                        <a href="profiles/portDal/harbourClub.html">
+                            <div class="info-window-img-wrapper">
+                                <img src="profiles/portDal/images/harbourClub/HarbourClubSquare.jpg" alt="Harbour Club" style="vertical-align: top"/>
+                            </div>
+                        </a>
+                        <div class="info-window-text-wrapper">
+                            <p class="info-heading">Address:</p>
+                            <p class="info-text">61-63 Lakeport Rd<br></p>
+                            <p class="info-heading">Type:</p>
+                            <p class="info-text">Residential, Commercial</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div id="PortPier" class="modal">
+            <div class="modal-content">
+                <span id="PortPierClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/portPier.html">
+                    <h3>Port Dalhousie Piers & Waterfront Trail</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/portPier.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/portPier/PortPierSquare.jpg" alt="Port Dalhousie Pier" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">10 Hogan's Alley<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Recreational</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="BeachesPort" class="modal">
+            <div class="modal-content">
+                <span id="BeachesPortClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/theBeaches.html">
+                    <h3>The Beaches at Port</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/theBeaches.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/theBeaches/TheBeachesSquare.jpg" alt="The Beaches at Port" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">6-10 Dalhousie Ave<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="LocksCondos" class="modal">
+            <div class="modal-content">
+                <span id="LocksCondosClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/theLocks.html">
+                    <h3>The Locks Condos</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/theLocks.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/theLocks/TheLocksSquare.jpg" alt="The Locks" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">12 - 22 Lock St<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential, Commercial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="PortBiz" class="modal">
+            <div class="modal-content">
+                <span id="PortBizClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/portBiz.html">
+                    <h3>Port Dalhousie Business District Revitalization</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/portBiz.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/portBiz/PortBizSquare.jpg" alt="The Juniper Inn" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">38 Lakeport Rd<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Commercial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="HenleyIsland" class="modal">
+            <div class="modal-content">
+                <span id="HenleyIslandClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/henleyIsland.html">
+                    <h3>Henley Rowing Pavilion</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/henleyIsland.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/henleyIsland/HenleyIslandSquare.jpg" alt="Henley Rowing Pavilion" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">Henley Island Dr<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Recreational</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="333Main" class="modal">
+            <div class="modal-content">
+                <span id="333MainClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/333Main.html">
+                    <h3>333 Main Street</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/333Main.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/333Main/333MainSquare.jpg" alt="333 Main St" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">333 Main St<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="102Lakeport" class="modal">
+            <div class="modal-content">
+                <span id="102LakeportClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/102Lakeport.html">
+                    <h3>102 Lakeport Road</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/102Lakeport.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/102Lakeport/102LakeportSquare.jpg" alt="102 Lakeport Rd" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">102 Lakeport Rd<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential, Commercial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ElementsCondos" class="modal">
+            <div class="modal-content">
+                <span id="ElementsCondosClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/elementsCondos.html">
+                    <h3>Elements Urban Condominiums</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/elementsCondos.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/elementsCondos/ElementsCondosSquare.jpg" alt="Elements Condos" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">212 Lakeport Rd<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="TheOrchard" class="modal">
+            <div class="modal-content">
+                <span id="TheOrchardClose" class="close"><p>&times;</p></span>
+                <a href="profiles/portDal/theOrchard.html">
+                    <h3>The Orchard Townhome Collection</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/portDal/theOrchard.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/portDal/images/theOrchard/TheOrchardSquare.jpg" alt="The Orchard" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">45 Simpson Rd<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Brock University District -->
+        <div id="CanGamesPark" class="modal">
+            <div class="modal-content">
+                <span id="CanGamesParkClose" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/canGamesPark.html">
+                    <h3>Canada Games Park</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/canGamesPark.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/canGamesPark/CanGamesParkSquare.jpg" alt="Canada Games Park" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">1812 Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Recreational</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="RegionHQ" class="modal">
+            <div class="modal-content">
+                <span id="RegionHQClose" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/regionHQ.html">
+                    <h3>International Plaza & Civic Park</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/regionHQ.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/regionHQ/RegionHQSquare.jpg" alt="Niagara Region HQ" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">1815 Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Recreational</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="BrockPath" class="modal">
+            <div class="modal-content">
+                <span id="BrockPathClose" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/brockPath.html">
+                    <h3>Brock District Multi-use Path & Gateway Features</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/brockPath.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/brockPath/BrockPathSquare.jpg" alt="Multi-use Path & Gateway Features" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Recreational</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="TaroHall" class="modal">
+            <div class="modal-content">
+                <span id="TaroHallClose" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/taroHall.html">
+                    <h3>Taro Hall, Goodman School of Business</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/taroHall.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/taroHall/TaroHallSquare.jpg" alt="Taro Hall" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">1812 Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Institutional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="RankinPavilion" class="modal">
+            <div class="modal-content">
+                <span id="RankinPavilionClose" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/rankinPavilion.html">
+                    <h3>Rankin Family Pavilion</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/rankinPavilion.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/rankinPavilion/RankinPavilionSquare.jpg" alt="Rankin Pavilion" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">1812 Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Institutional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="VillageRoad" class="modal">
+            <div class="modal-content">
+                <span id="VillageRoadClose" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/villageRoad.html">
+                    <h3>Village Road Realignment & Extension</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/villageRoad.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/villageRoad/VillageRoadSquare.jpg" alt="Village Road" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">1812 Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Transport</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="AlumniField" class="modal">
+            <div class="modal-content">
+                <span id="AlumniFieldClose" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/alumniField.html">
+                    <h3>Alumni Field</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/alumniField.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/alumniField/AlumniFieldSquare.jpg" alt="Alumni Field" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">1812 Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Recreational</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="DeCewRes" class="modal">
+            <div class="modal-content">
+                <span id="DeCewResClose" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/deCewRes.html">
+                    <h3>DeCew Residence Renewal</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/deCewRes.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/deCewRes/DeCewResSquare.jpg" alt="DeCew Residence" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">1812 Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential, Institutional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Res8" class="modal">
+            <div class="modal-content">
+                <span id="Res8Close" class="close"><p>&times;</p></span>
+                <a href="profiles/brockUni/res8.html">
+                    <h3>Residence 8</h3>
+                </a>
+                <div class="info-window-wrapper">
+                    <a href="profiles/brockUni/res8.html">
+                        <div class="info-window-img-wrapper">
+                            <img src="profiles/brockUni/images/res8/Res8Square.jpg" alt="Residence 8" style="vertical-align: top"/>
+                        </div>
+                    </a>
+                    <div class="info-window-text-wrapper">
+                        <p class="info-heading">Address:</p>
+                        <p class="info-text">1812 Sir Isaac Brock Way<br></p>
+                        <p class="info-heading">Type:</p>
+                        <p class="info-text">Residential, Institutional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="footer-contents">
+        <div class="footer-left-side">
+            <p>contact: niagaraDevs[at]gmail.com</p>
+        </div>
+        <div class="footer-right-side">
+            <p>designed by Adam Vassallo</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script>
+    var map;
+
+    function initMap () {
+
+        //Map options
+        var options = {
+            center: { lat: 43.1594, lng: -79.2469},
+            zoom: 11,
+            zoomControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_TOP
+            },
+            mapTypeControlOptions: {
+                position: google.maps.ControlPosition.TOP_RIGHT
+            },
+            streetViewControl: false,
+            fullscreenControl: false,
+            styles: [
+            {
+                "featureType": "administrative",
+                "elementType": "geometry",
+                "stylers": [
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "stylers": [
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry.fill",
+                "stylers": [
+                {
+                    "visibility": "on"
+                }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.icon",
+                "stylers": [
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "stylers": [
+                {
+                    "visibility": "off"
+                }
+                ]
+            }
+            ]
+        };
+
+        //Global variables for map
+        var prevMarker; //vars for marker clicking
+        var prevProps;
+        var prevModal;
+
+        //New map
+        map = new google.maps.Map(document.getElementById('map'), options);
+
+        //Map click event listener
+        map.addListener('mousedown', function() {
+            if (prevMarker !== undefined) {
+                prevMarker.setIcon(prevProps.iconImageSmall);
+                prevModal.style.display = "none";
+            }
+        });
+
+        //Add marker function
+        function addMarker(props) {
+            var marker = new google.maps.Marker({
+                position: props.coords,
+                map: map,
+                icon: props.iconImageSmall
+            });
+
+            marker.addListener('click', function() {
+                if (prevMarker !== undefined) {
+                    //make prevMarker icon smaller
+                    prevMarker.setIcon(prevProps.iconImageSmall);
+                    //close prevMarker modal
+                    prevModal.style.display = "none";
+                }
+                //pan map
+                map.panTo(marker.getPosition());
+                //set prevMarker to this marker
+                prevMarker = marker;
+                //set prevProps to this props
+                prevProps = props;
+                //make marker bigger
+                marker.setIcon(props.iconImageBig);
+                //open modal
+                var modal = document.getElementById(props.projectId); //vars for modal
+                prevModal = modal;
+                var span = document.getElementById(props.closeTag);
+                modal.style.display = "block";
+                //close modal on (x) click
+                span.onclick = function() {
+                    modal.style.display = "none";
+                    marker.setIcon(props.iconImageSmall);
+                }
+
+            });
+
+        }
+
+        //Markers
+        var markers = [
+            {   //Royal Port
+                coords:{lat:43.201005,lng:-79.265146},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "RoyalPort",
+                closeTag: "RoyalPortClose"
+            },
+            {   //Harbour Club
+                coords:{lat:43.199846, lng:-79.265767},
+                iconImageSmall: "images/markerImages/preconstruction32.png",
+                iconImageBig: "images/markerImages/preconstruction64.png",
+                projectId: "HarbourClub",
+                closeTag: "HarbourClubClose"
+            },
+            {   //Port Pier
+                coords:{lat:43.202767, lng:-79.265001},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "PortPier",
+                closeTag: "PortPierClose"
+            },
+            {   //Beaches at Port Condos
+                coords:{lat:43.203641, lng:-79.268043},
+                iconImageSmall: "images/markerImages/complete32.png",
+                iconImageBig: "images/markerImages/complete64.png",
+                projectId: "BeachesPort",
+                closeTag: "BeachesPortClose"
+            },
+            {   //The Locks Condos
+                coords:{lat:43.202620, lng:-79.266539},
+                iconImageSmall: "images/markerImages/preconstruction32.png",
+                iconImageBig: "images/markerImages/preconstruction64.png",
+                projectId: "LocksCondos",
+                closeTag: "LocksCondosClose"
+            },
+            {   //Port Dal Biz District Revitalization
+                coords:{lat:43.202017, lng:-79.265866},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "PortBiz",
+                closeTag: "PortBizClose"
+            },
+            {   //Henley Island CSG Project
+                coords:{lat:43.193640, lng:-79.271454},
+                iconImageSmall: "images/markerImages/preconstruction32.png",
+                iconImageBig: "images/markerImages/preconstruction64.png",
+                projectId: "HenleyIsland",
+                closeTag: "HenleyIslandClose"
+            },
+            {   //Canada Games Park
+                coords:{lat:43.116163, lng:-79.244259},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "CanGamesPark",
+                closeTag: "CanGamesParkClose"
+            },
+            {   //Region HQ
+                coords:{lat:43.117166, lng:-79.241717},
+                iconImageSmall: "images/markerImages/complete32.png",
+                iconImageBig: "images/markerImages/complete64.png",
+                projectId: "RegionHQ",
+                closeTag: "RegionHQClose"
+
+            },
+            {   //Brock Multi-use Path
+                coords:{lat:43.118975, lng:-79.237286},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "BrockPath",
+                closeTag: "BrockPathClose"
+            },
+            {   //Brock Taro Hall
+                coords:{lat:43.119147, lng:-79.248123},
+                iconImageSmall: "images/markerImages/complete32.png",
+                iconImageBig: "images/markerImages/complete64.png",
+                projectId: "TaroHall",
+                closeTag: "TaroHallClose"
+            },
+            {   //Brock Rankin Pavilion
+                coords:{lat:43.119353, lng:-79.248991},
+                iconImageSmall: "images/markerImages/complete32.png",
+                iconImageBig: "images/markerImages/complete64.png",
+                projectId: "RankinPavilion",
+                closeTag: "RankinPavilionClose"
+            },
+            {   //Brock Village Road
+                coords:{lat:43.118321, lng:-79.252418},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "VillageRoad",
+                closeTag: "VillageRoadClose"
+            },
+            {   //Brock Alumni Field
+                coords:{lat:43.119027, lng:-79.253045},
+                iconImageSmall: "images/markerImages/complete32.png",
+                iconImageBig: "images/markerImages/complete64.png",
+                projectId: "AlumniField",
+                closeTag: "AlumniFieldClose"
+            },
+            {   //Brock DeCew Residence
+                coords:{lat:43.120672, lng:-79.247877},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "DeCewRes",
+                closeTag: "DeCewResClose"
+            },
+            {   //Brock Residence 8
+                coords:{lat:43.121035, lng:-79.244706},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "Res8",
+                closeTag: "Res8Close"
+            },
+            {   //333 Main Street (St. Catharines)
+                coords:{lat:43.191387, lng:-79.283221},
+                iconImageSmall: "images/markerImages/preconstruction32.png",
+                iconImageBig: "images/markerImages/preconstruction64.png",
+                projectId: "333Main",
+                closeTag: "333MainClose"
+            },
+            {   //102 Lakeport Road (St. Catharines)
+                coords:{lat:43.196458, lng:-79.261353},
+                iconImageSmall: "images/markerImages/preconstruction32.png",
+                iconImageBig: "images/markerImages/preconstruction64.png",
+                projectId: "102Lakeport",
+                closeTag: "102LakeportClose"
+            },
+            {   //Elements Urban Condos
+                coords:{lat:43.190795, lng:-79.254871},
+                iconImageSmall: "images/markerImages/complete32.png",
+                iconImageBig: "images/markerImages/complete64.png",
+                projectId: "ElementsCondos",
+                closeTag: "ElementsCondosClose"
+            },
+            {   //The Orchard Townhome Collection
+                coords:{lat:43.204867, lng:-79.251376},
+                iconImageSmall: "images/markerImages/construction32.png",
+                iconImageBig: "images/markerImages/construction64.png",
+                projectId: "TheOrchard",
+                closeTag: "TheOrchardClose"
+            }
+        ];
+
+        //Calling addMarker function
+        for(var i = 0; i < markers.length; i++) {
+            addMarker(markers[i]);
+        }
+
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=INSERT_API_KEY_HERE&callback=initMap&libraries=&v=weekly"></script>
+</html> 
