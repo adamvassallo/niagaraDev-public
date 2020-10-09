@@ -6,6 +6,8 @@ A website tracking the urban development happenings of the Niagara Region, Ontar
 
 I developed this site to form a central location for the Niagara urban development photos and articles I come across. The files uploaded here contain a subset of the total content on the live website (www.niagaradev.ca).
 
+NOTE: must update index.html line 800 with your Google Maps API key
+
 ---
 
 ## Contributors
